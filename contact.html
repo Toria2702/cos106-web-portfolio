@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Victoria Okon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-name">Victoria Okon</span>
+        <span class="brand-tag">Software Engineering &bull; MIVA Open University</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <div class="page-header" style="text-align: center;">
+      <h1>Contact Me</h1>
+      <p>Feel free to reach out for academic collaboration, project discussions, or inquiries.</p>
+    </div>
+
+    <!-- Contact Form Container -->
+    <div class="contact-wrapper">
+      
+      <!-- Submission Feedback Alert -->
+      <div id="formAlert" class="alert-box"></div>
+
+      <form id="contactForm" novalidate>
+
+        <!-- Student/User Name -->
+        <div class="form-group">
+          <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" class="form-input" placeholder="e.g. Victoria Okon" autocomplete="name">
+          <div id="nameError" class="error-message"></div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="emailAddress" class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="emailAddress" class="form-input" placeholder="e.g. victoria@example.com" autocomplete="email">
+          <div id="emailError" class="error-message"></div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+          <label for="phoneNumber" class="form-label">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="phoneNumber" class="form-input" placeholder="e.g. 08012345678 (digits only)" autocomplete="tel">
+          <div id="phoneError" class="error-message"></div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="messageText" class="form-label">Message <span class="required">*</span></label>
+          <textarea id="messageText" class="form-textarea" rows="5" placeholder="Type your message here..."></textarea>
+          <div id="messageError" class="error-message"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Victoria Okon &bull; COS 106 Introduction to Web Technologies &bull; MIVA Open University</p>
+      <div class="footer-links">
+        <a href="https://github.com/Toria2702" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

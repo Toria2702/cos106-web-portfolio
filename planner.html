@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Victoria Okon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-name">Victoria Okon</span>
+        <span class="brand-tag">Software Engineering &bull; MIVA Open University</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Me</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link active">Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>Academic Activity &amp; Task Planner</h1>
+      <p>Organize semester assignments, schedule upcoming project milestones, and track academic deadlines.</p>
+    </div>
+
+    <!-- Planner Grid: Form on Left, Task List on Right -->
+    <div class="planner-grid">
+
+      <!-- Add Task Form -->
+      <section class="planner-form-card">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+          
+          <div class="form-group">
+            <label for="taskTitle" class="form-label">Task Description <span class="required">*</span></label>
+            <input type="text" id="taskTitle" class="form-input" placeholder="e.g. Complete COS 106 web project" required>
+          </div>
+
+          <div class="form-group">
+            <label for="taskCourse" class="form-label">Course Code</label>
+            <input type="text" id="taskCourse" class="form-input" value="COS 106">
+          </div>
+
+          <div class="form-group">
+            <label for="taskDueDate" class="form-label">Due Date</label>
+            <input type="date" id="taskDueDate" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="taskPriority" class="form-label">Priority Level</label>
+            <select id="taskPriority" class="form-select">
+              <option value="high">High Priority</option>
+              <option value="medium" selected>Medium Priority</option>
+              <option value="low">Low Priority</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">+ Add to Planner</button>
+        </form>
+      </section>
+
+      <!-- Interactive Task List & Filter Toolbar -->
+      <section class="planner-list-card">
+        <h2>My Coursework Schedule</h2>
+
+        <div class="planner-toolbar">
+          <div class="filter-group">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+            <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+          </div>
+          <div class="task-stats" id="taskStats">Loading tasks...</div>
+        </div>
+
+        <!-- Dynamic Task Container -->
+        <div class="task-list" id="taskList">
+          <!-- Populated dynamically via JavaScript (planner.js) -->
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Victoria Okon &bull; COS 106 Introduction to Web Technologies &bull; MIVA Open University</p>
+      <div class="footer-links">
+        <a href="https://github.com/Toria2702" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
