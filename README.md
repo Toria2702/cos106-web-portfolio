@@ -1,172 +1,107 @@
-# COS 106 Term Project: Student Portfolio & Academic Management Website
+# COS 106 Term Project – Student Portfolio & Academic Management Website
 
-**Student Name:** Victoria Okon  
-**Matriculation Number:** MIVA/BSc/SE/2025/0428  
-**Program:** Software Engineering (B.Sc.)  
-**Course Code & Title:** COS 106 – Introduction to Web Technologies  
-**Institution:** MIVA Open University, Abuja, Nigeria  
-**GitHub Profile:** [https://github.com/Toria2702](https://github.com/Toria2702)  
-**Project Mark:** Practical Term Project (20 Marks)  
+**Name:** Victoria Okon  
+**Matric No:** MIVA/BSc/SE/2025/0428  
+**Programme:** Software Engineering  
+**Course:** COS 106 – Introduction to Web Technologies  
+**University:** MIVA Open University  
 
 ---
 
-## 1. Project Overview
+## What This Project Is About
 
-This project is a responsive, multi-page personal academic portfolio and student management web application developed to fulfill the term project requirements for **COS 106: Introduction to Web Technologies**.
+This is my practical term project for COS 106. It's a multi-page portfolio website where I can showcase my academic profile, display projects I've worked on, plan my coursework using an interactive planner, and provide a contact form for anyone who wants to reach me.
 
-The application is built using standard, semantic **HTML5**, external **CSS3** (incorporating Flexbox and CSS Grid), and vanilla **JavaScript** (implementing DOM manipulation, event handling, array operations, and browser `localStorage` persistence).
-
----
-
-## 2. Website Architecture & Pages
-
-The project consists of 5 dedicated, linked web pages:
-
-1. **Homepage (`index.html`)**
-   - Student profile presentation with official photograph (`assets/profile.jpg`).
-   - Welcome message and academic bio.
-   - Multimedia audio welcome player (`<audio controls>`) featuring an intro chime (`assets/intro.wav`).
-   - Quick navigation grid linking to all sections.
-
-2. **About Me Page (`about.html`)**
-   - Educational background in Software Engineering at MIVA Open University.
-   - Career aspirations in systems software, full-stack engineering, and digital tools for Africa.
-   - Semester Coursework table listing registered courses, credit units, and academic standing.
-   - Technical Skills Matrix table with visual percentage progress bars.
-   - Lists of hobbies, problem-solving interests, and community engagement.
-
-3. **Projects Showcase (`projects.html`)**
-   - Three featured programming projects:
-     1. *Student Academic Record & CGPA System* (C++ / OOP).
-     2. *Interactive Academic Planner & Task Tracker* (HTML5 / CSS Grid / JS).
-     3. *Graph Search & Pathfinding Visualizer* (JavaScript / Canvas / Dijkstra).
-   - High-resolution SVG preview screenshots for each project.
-   - Technical tags and links to source code repositories and demos on GitHub (`https://github.com/Toria2702`).
-
-4. **Academic Planner Page (`planner.html`)**
-   - Interactive task management system powered by vanilla JavaScript (`js/planner.js`).
-   - Form to add new coursework tasks with title, course code, due date, and priority level.
-   - Interactive checkboxes to mark tasks as completed (with visual strikethrough).
-   - Task deletion with confirmation.
-   - Filtering by status (*All*, *Pending*, *Completed*).
-   - Live task statistics counter.
-   - Data persists across browser sessions using `localStorage`.
-
-5. **Contact Page (`contact.html`)**
-   - Contact form with client-side JavaScript validation (`js/validation.js`).
-   - Validates that no field is left blank.
-   - Validates email format using regex pattern (`name@domain.com`).
-   - Validates that phone number contains digits only (7–15 digits).
-   - Real-time inline error messages and confirmation banner upon successful submission.
+Everything was built with plain HTML, CSS, and JavaScript — no frameworks or libraries.
 
 ---
 
-## 3. Directory Structure
+## Pages
+
+### 1. Homepage (`index.html`)
+The landing page. It has my name, profile photo, a short welcome message, navigation links to every other page, and an audio intro you can play.
+
+### 2. About Me (`about.html`)
+This page covers my educational background at MIVA, what I want to do career-wise, a table of my current courses and grades, a skills table showing what technologies I'm comfortable with (with progress bars), and some of my hobbies.
+
+### 3. Projects (`projects.html`)
+I put up three projects here with descriptions, the tech I used, and links to the GitHub repos:
+- A Student Academic Record & CGPA calculator (C++)
+- An Academic Task Planner (the same one on this site, HTML/CSS/JS)
+- A Pathfinding Algorithm Visualizer (JavaScript)
+
+Each project has a preview image and tags showing the technologies used.
+
+### 4. Academic Planner (`planner.html`)
+This is the interactive part. You can:
+- Add new tasks (with a title, course code, due date, and priority)
+- Mark tasks as done by ticking the checkbox
+- Delete tasks you no longer need
+- Filter between All, Pending, and Completed views
+
+Tasks are saved in the browser's localStorage so they don't disappear when you close the tab.
+
+### 5. Contact (`contact.html`)
+A simple contact form with four fields — name, email, phone, and message. JavaScript validates everything before submission:
+- No field can be left empty
+- Email must have a proper format (something@domain.com)
+- Phone number must be digits only (7 to 15 digits)
+
+If validation passes, a green success banner appears and the data gets saved locally.
+
+---
+
+## Folder Structure
 
 ```
-COS 106 Web Project/
-├── index.html              # Homepage & student introduction
-├── about.html              # Academic background, coursework & skills
-├── projects.html           # 3 featured software projects with screenshots
-├── planner.html            # Interactive task manager & planner
-├── contact.html            # Validated contact form
+├── index.html
+├── about.html
+├── projects.html
+├── planner.html
+├── contact.html
 ├── css/
-│   └── style.css           # External responsive stylesheet (Flexbox & Grid)
+│   └── style.css
 ├── js/
-│   ├── main.js             # Mobile navbar toggle & event handling
-│   ├── planner.js          # Task manager logic, arrays & localStorage
-│   └── validation.js       # Contact form validation logic
+│   ├── main.js
+│   ├── planner.js
+│   └── validation.js
 ├── assets/
-│   ├── profile.jpg         # Student profile picture
-│   ├── intro.wav           # Multimedia audio welcome greeting
-│   ├── project1-records.svg # Project 1 screenshot preview
-│   ├── project2-planner.svg # Project 2 screenshot preview
-│   └── project3-pathfinding.svg # Project 3 screenshot preview
-└── README.md               # Project documentation & GitHub guide
+│   ├── profile.jpg
+│   ├── intro.wav
+│   ├── project1-records.svg
+│   ├── project2-planner.svg
+│   └── project3-pathfinding.svg
+└── README.md
 ```
 
 ---
 
-## 4. How to Test & Run Locally
+## How to Open
 
-1. Open File Explorer and navigate to the project directory:
-   ```
-   C:\Users\Blessing\Documents\COS 106 Web Project
-   ```
-2. Double-click **`index.html`** to launch the website in Google Chrome, Microsoft Edge, or Mozilla Firefox.
-3. No build tools, packages, or local servers are required — all code runs purely in any modern browser.
+Just double-click `index.html` in any browser (Chrome, Edge, Firefox). No installation or server needed.
 
 ---
 
-## 5. GitHub Upload & Multi-Account Isolation Guide
+## Technical Summary
 
-If you have another Git account already registered globally on your computer, you can configure Git **locally only for this folder** without modifying or overwriting your other account.
-
-### Step 1: Create a New Repository on GitHub
-1. Log in to your GitHub account: **`Toria2702`** at [github.com](https://github.com).
-2. Click **New** repository.
-3. Name it: **`cos106-web-portfolio`**.
-4. Choose **Public** *(required for free GitHub Pages)*.
-5. Leave "Add a README" **unchecked**.
-6. Click **Create repository**.
-
-### Step 2: Initialize Git and Set LOCAL Identity (Isolated)
-Open PowerShell or Command Prompt and run:
-
-```bash
-# 1. Navigate to this project folder
-cd "C:\Users\Blessing\Documents\COS 106 Web Project"
-
-# 2. Initialize git repository
-git init
-
-# 3. Configure identity LOCALLY ONLY (notice NO --global flag)
-# This writes ONLY to this repository's .git/config and will NOT touch your other Git account!
-git config user.name "Victoria Okon"
-git config user.email "your-email-for-toria2702@example.com"
-
-# 4. Stage and commit files
-git add .
-git commit -m "Initial commit: COS 106 Student Portfolio & Academic Management Website"
-
-# 5. Set branch to main
-git branch -M main
-
-# 6. Add remote origin for Toria2702
-git remote add origin https://github.com/Toria2702/cos106-web-portfolio.git
-```
-
-### Step 3: Push Without Conflict (Using a Personal Access Token)
-Because Windows Credential Manager may default to your other Git account, you can push cleanly using a **GitHub Personal Access Token** in the URL or via prompt:
-
-1. Generate a token in your `Toria2702` account:
-   - On GitHub, click your profile picture $\rightarrow$ **Settings** $\rightarrow$ **Developer settings** (at the very bottom of the left sidebar).
-   - Click **Personal access tokens** $\rightarrow$ **Tokens (classic)** $\rightarrow$ **Generate new token (classic)**.
-   - Note: `COS 106 Upload`. Select the **`repo`** scope checkbox.
-   - Click **Generate token** and copy it (e.g., `ghp_xxxxxxxxxxxx`).
-
-2. Push using the token in the command:
-```bash
-git push https://Toria2702:<YOUR_TOKEN>@github.com/Toria2702/cos106-web-portfolio.git main
-```
-
-*(This bypasses any cached credentials from other accounts on your system and pushes directly to `Toria2702` safely).*
-
----
-
-## 6. Enable Free Hosting via GitHub Pages
-
-1. Go to your repository at: `https://github.com/Toria2702/cos106-web-portfolio`.
-2. Click **Settings** $\rightarrow$ **Pages** (in left sidebar).
-3. Under **Build and deployment**:
-   - Source: **Deploy from a branch**
-   - Branch: **`main`** and folder: **`/ (root)`**
-4. Click **Save**.
-5. After 1 to 2 minutes, refresh the page to view your live URL:
-   > **`https://toria2702.github.io/cos106-web-portfolio/`**
-
----
-
-## 7. Submission Details for MIVA Open University
-- **Hosted Website URL:** `https://toria2702.github.io/cos106-web-portfolio/`
-- **GitHub Repository URL:** `https://github.com/Toria2702/cos106-web-portfolio`
+| Requirement | Where It's Used |
+|---|---|
+| Semantic HTML | All pages use `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` |
+| Forms | Contact page and Planner page |
+| Tables | About Me page (coursework table + skills matrix table) |
+| Images | Profile photo on homepage, project screenshots on projects page |
+| Hyperlinks | Navigation menu on every page, project repo links, footer links |
+| Lists | About Me page (education, career goals, hobbies) |
+| Multimedia | Audio player on homepage (`<audio>` element) |
+| External CSS | Single stylesheet (`css/style.css`) used across all pages |
+| Responsive Design | Media queries + mobile hamburger menu |
+| Flexbox | Navigation bar, hero section, footer layout |
+| CSS Grid | Quick-links grid, about page columns, projects grid, planner layout |
+| Animations/Transitions | Card hover effects, button hover states, nav transitions |
+| Consistent Colour Scheme | CSS custom properties (variables) in `:root` |
+| Event Handling | Nav toggle, form submissions, checkbox clicks, filter buttons, delete buttons |
+| DOM Manipulation | Task rendering, error messages, success alerts, dynamic content updates |
+| Form Validation | Contact page — empty field checks, email regex, phone digits-only check |
+| Dynamic Content | Planner tasks rendered from JavaScript arrays |
+| Arrays & Functions | Task storage, filtering, adding, deleting all use arrays and helper functions |
+| Interactive Task System | Full add/complete/delete/filter planner with localStorage persistence |
