@@ -2,3 +2,7 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# Standalone Defence and Report Files
+*DEFENCE*
+*REPORT*
