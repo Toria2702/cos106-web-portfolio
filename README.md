@@ -70,9 +70,9 @@ If validation passes, a green success banner appears and the data gets saved loc
 │   ├── profile.jpg
 │   ├── intro.mp4
 │   ├── intro.wav
-│   ├── project1-records.svg
-│   ├── project2-planner.svg
-│   └── project3-pathfinding.svg
+│   ├── project1-records.png
+│   ├── project2-planner.jpg
+│   └── project3-pathfinding.jpg
 └── README.md
 ```
 
