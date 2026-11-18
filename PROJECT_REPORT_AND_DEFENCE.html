@@ -118,38 +118,6 @@
       min-width: 110px;
     }
 
-    /* Print Button Bar */
-    .print-bar {
-      background-color: #2a082a;
-      color: #ffffff;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .btn-print {
-      background-color: var(--primary);
-      color: #ffffff;
-      border: none;
-      padding: 0.6rem 1.3rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border-radius: 4px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-print:hover {
-      background-color: #a014a0;
-    }
-
     /* Section Headings */
     h2.section-title {
       font-size: 1.45rem;
@@ -263,19 +231,6 @@
       font-weight: 500;
     }
 
-    .screenshot-guide-box {
-      background-color: #fef9e7;
-      border: 1px dashed #d4ac0d;
-      border-radius: 6px;
-      padding: 1rem 1.2rem;
-      margin: 1rem 0;
-      font-size: 0.9rem;
-    }
-
-    .screenshot-guide-box strong {
-      color: #9a7d0a;
-    }
-
     /* Links Box */
     .links-card {
       background-color: var(--primary-light);
@@ -305,43 +260,11 @@
       font-weight: 600;
       word-break: break-all;
     }
-
-    /* Q&A Defence Cards */
-    .qa-card {
-      background-color: #ffffff;
-      border: 1px solid #ebd0eb;
-      border-left: 4px solid var(--accent);
-      border-radius: 4px;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .qa-question {
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin-bottom: 0.4rem;
-      font-size: 0.98rem;
-    }
-
-    .qa-answer {
-      color: var(--text);
-      font-size: 0.92rem;
-      margin-bottom: 0;
-    }
   </style>
 </head>
 <body>
 
   <div class="report-paper">
-
-    <!-- Print Navigation Bar (Hidden when printed to PDF) -->
-    <div class="print-bar no-print">
-      <div>
-        <strong>COS 106 Term Project Report &amp; Defence Document</strong><br>
-        <span style="font-size: 0.85rem; color: #f5d0f5;">Ready to print or save as PDF via your browser.</span>
-      </div>
-      <button class="btn-print" onclick="window.print()">&#128438; Print / Save as PDF</button>
-    </div>
 
     <!-- Document Header -->
     <header class="report-header">
@@ -460,11 +383,6 @@
         <div class="figure-caption">Figure 1.1: Official Student Profile Picture (Victoria Okon &bull; 2025/C/SENG/0801)</div>
       </div>
 
-      <div class="screenshot-guide-box">
-        <strong>&#128247; Screenshot Guide for Oral Defence / PDF:</strong><br>
-        Open <a href="https://toria2702.github.io/cos106-web-portfolio/index.html" target="_blank">index.html</a> in your browser. Press <code>Windows + Shift + S</code>, capture the full top Hero card (profile photo, name, matric number, bio, and buttons), and place it here.
-      </div>
-
       <!-- Feature 2: Audio Welcome Note -->
       <h3 class="sub-section-title">2. Multimedia Audio Introduction (<code style="color: var(--primary);">assets/intro.mp4</code>)</h3>
       <p>
@@ -523,12 +441,11 @@
       <!-- Feature 6: Validated Contact Gateway -->
       <h3 class="sub-section-title">6. Client-Side Validated Contact Gateway (<code style="color: var(--primary);">contact.html</code>)</h3>
       <p>
-        <strong>What It Does:</strong> Allows visitors to submit inquiries or collaboration requests. JavaScript strictly verifies that no field is left blank, the email is syntactically valid, and the phone number consists solely of numbers before accepting the message.
+        <strong>What It Does:</strong> Allows visitors to submit inquiries or collaboration requests. JavaScript strictly verifies that no field is left blank, the email is syntactically valid, and the phone number consists solely of numeric digits before accepting the message.
       </p>
-      <div class="screenshot-guide-box">
-        <strong>&#128247; Screenshot Guide for Contact Form:</strong><br>
-        Open <a href="https://toria2702.github.io/cos106-web-portfolio/contact.html" target="_blank">contact.html</a>, trigger validation (e.g., leave a field empty or enter letters into the phone field), press <code>Windows + Shift + S</code>, and capture the form with inline error alerts.
-      </div>
+      <p>
+        <strong>Validation Behaviour:</strong> When users attempt to submit invalid entries—such as omitting their name, typing letters into the phone number field, or typing an improper email format—the form intercepts submission via <code>e.preventDefault()</code>, highlights the offending field with a magenta/red border, and renders an inline alert directly beneath the input. All checks execute both on the input's <code>blur</code> event and on final form submission.
+      </p>
     </section>
 
     <!-- SECTION C: JAVASCRIPT IMPLEMENTATION -->
@@ -729,61 +646,10 @@ taskListContainer.addEventListener("click", function (e) {
       </div>
     </section>
 
-    <!-- SECTION E: PROJECT DEFENCE GUIDE -->
+    <!-- SECTION E: CONCLUSION & ASSESSMENT SUMMARY -->
     <div class="page-break"></div>
     <section id="section-e">
-      <h2 class="section-title">E. Project Defence &amp; Interview Preparation Guide</h2>
-      <p>
-        This section prepares me to confidently answer oral examination questions from the Web Technologies lecturer during project defence.
-      </p>
-
-      <div class="qa-card">
-        <div class="qa-question">Q1: Why did you build this project using vanilla JavaScript instead of React, Vue, or Tailwind CSS?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> The objective of COS 106 is to demonstrate core foundational mastery of the web platform. Utilizing frameworks often obscures essential mechanisms like DOM tree operations, event bubbling, and CSS layout algorithms. By authoring pure HTML5, CSS3, and ES6 JavaScript, I demonstrate complete command over native web fundamentals without relying on third-party abstractions.
-        </div>
-      </div>
-
-      <div class="qa-card">
-        <div class="qa-question">Q2: How does the Academic Planner save tasks, and why did you choose localStorage?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> Tasks are stored as an array of JavaScript objects in memory. Whenever a task is created, toggled, or deleted, the array is converted to a string using <code>JSON.stringify()</code> and saved to browser <code>localStorage</code> under a unique key. <code>localStorage</code> was selected because it provides synchronous, client-side persistence up to ~5MB without requiring backend servers or database infrastructure, making it ideal for a standalone web portfolio.
-        </div>
-      </div>
-
-      <div class="qa-card">
-        <div class="qa-question">Q3: How does your form validation ensure phone numbers contain digits only?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> In <code>js/validation.js</code>, the phone number is verified using a regular expression: <code>/^\d+$/</code>. The caret (<code>^</code>) asserts the start of the string, <code>\d+</code> asserts one or more numeric digits, and the dollar sign (<code>$</code>) asserts the end of the string. If any non-digit character (such as letters, spaces, or hyphens) is present, the test evaluates to false and triggers an inline error message.
-        </div>
-      </div>
-
-      <div class="qa-card">
-        <div class="qa-question">Q4: Why was Dark Magenta (#8B008B) chosen, and how is visual consistency maintained?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> The Dark Magenta (<code>#8B008B</code>) color was selected to create an engaging, modern, and distinctive academic aesthetic while maintaining high contrast ratios for readability. Visual consistency is guaranteed across all five pages through CSS variables declared in the <code>:root</code> block of <code>css/style.css</code>.
-        </div>
-      </div>
-
-      <div class="qa-card">
-        <div class="qa-question">Q5: How does your audio welcome message fulfill the multimedia rubric requirement?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> The rubric specifies <em>Multimedia (video or audio)</em>. Following the lecturer's advice to think creatively, I integrated an authentic audio welcome greeting (<code>intro.mp4</code>) right on the homepage hero section. This provides an engaging audio introduction that makes the portfolio personal, professional, and unique.
-        </div>
-      </div>
-
-      <div class="qa-card">
-        <div class="qa-question">Q6: How do you ensure the website is responsive across mobile, tablet, and desktop devices?</div>
-        <div class="qa-answer">
-          <strong>Defence:</strong> Responsiveness is achieved through fluid CSS Grid and Flexbox containers, the HTML5 viewport meta tag (<code>width=device-width, initial-scale=1.0</code>), and media queries (<code>@media (max-width: 768px)</code>). On screens smaller than 768px, horizontal two-column grids stack into single-column layouts, tables enable horizontal scrolling, and navigation collapses into a responsive hamburger menu.
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION F: CONCLUSION -->
-    <div class="page-break"></div>
-    <section id="section-f">
-      <h2 class="section-title">F. Conclusion &amp; Self-Assessment</h2>
+      <h2 class="section-title">E. Conclusion &amp; Assessment Summary</h2>
       <p>
         The development of this portfolio platform for <strong>COS 106</strong> has reinforced my understanding of front-end engineering fundamentals. By adhering strictly to semantic markup, mobile-first responsive styling, and modular JavaScript without framework bloat, the resulting application is lightweight, performant, and fully functional.
       </p>
@@ -795,7 +661,7 @@ taskListContainer.addEventListener("click", function (e) {
           <tr>
             <th>Assessment Requirement</th>
             <th>Project Demonstration</th>
-            <th>Self-Assessment Status</th>
+            <th>Compliance Status</th>
           </tr>
         </thead>
         <tbody>

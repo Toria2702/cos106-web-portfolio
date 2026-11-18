@@ -57,10 +57,7 @@ The primary objectives of this project are:
 ### 1. Homepage & Hero Section (`index.html`)
 - **What It Does:** Welcomes visitors, presents my identity as an undergraduate Software Engineering student at MIVA Open University, and outlines my personal software development journey.
 - **Implementation:** Built inside a `<section class="hero-card">` with an avatar container and text content. The circular profile photo uses an outline in `#8B008B` with subtle drop shadows.
-- **Screenshot Location:** *Figure 1: Homepage Profile & Welcome Hero*  
-  *(Image file: `assets/profile.jpg`)*
-
-> **📸 How to Capture:** Open `index.html` in Chrome or Edge. Press `Windows + Shift + S`, select the entire top Hero card (photo, name, matric number, bio text, and action buttons), and insert the capture here.
+- **Visual Evidence:** *Figure 1: Official Student Profile Picture* (`assets/profile.jpg`)
 
 ---
 
@@ -99,14 +96,12 @@ The primary objectives of this project are:
 
 ### 6. Client-Side Validated Contact Form (`contact.html`)
 - **What It Does:** Allows users to submit messages while validating inputs entirely on the client before processing.
-- **Validation Rules:**
-  - Full Name: Cannot be empty.
-  - Email Address: Must match a valid email format (`name@domain.com`).
-  - Phone Number: Strictly numbers only (no letters, spaces, or dashes), length 7–15 digits.
+- **Validation Rules & Implementation:**
+  - Full Name: Cannot be empty. Evaluated on input blur and form submit.
+  - Email Address: Must match standard email pattern (`/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/`).
+  - Phone Number: Must contain digits only (`/^\d+$/`), with length constrained between 7 and 15 digits (`/^\d{7,15}$/`).
   - Message: Cannot be empty.
-- **Screenshot Location:** *Figure 5: Contact Form with Validation State*
-
-> **📸 How to Capture:** Open `contact.html`, leave fields empty or type letters into the phone input, and click "Send Message". Press `Windows + Shift + S`, capture the form showing the red error messages, and insert here.
+  - On failure, default submission is prevented (`e.preventDefault()`) and dynamic error messages are rendered below each invalid field.
 
 ---
 
@@ -250,33 +245,7 @@ function renderTasks() {
 
 ---
 
-## E. Project Defence & Interview Guide
-
-This section outlines prepared responses to questions typically posed by the Web Technologies lecturer during oral assessments:
-
-### Q1: Why did you build this project using vanilla JavaScript instead of React, Vue, or Tailwind CSS?
-**Answer:**  
-*"The core learning objective of COS 106 is to demonstrate a thorough command of fundamental client-side web technologies. Front-end frameworks introduce large bundles and abstract away the fundamental mechanisms of the web. By writing vanilla HTML5, CSS3, and JavaScript, I demonstrate my direct understanding of semantic structuring, the DOM tree, native event bubbling, array transformations, and client-side storage."*
-
-### Q2: How does your Academic Planner retain tasks when the page is refreshed?
-**Answer:**  
-*"The planner uses the browser's Web Storage API (`localStorage`). Whenever a task is created, marked completed, or deleted, the in-memory JavaScript array is converted into a JSON string using `JSON.stringify()` and written to `localStorage`. On page load, `JSON.parse()` reads the stored string back into our array, ensuring tasks persist across browser sessions."*
-
-### Q3: How does your form validation ensure phone numbers contain digits only?
-**Answer:**  
-*"In `js/validation.js`, the input is validated against the regular expression `/^\d+$/`. The `^` asserts the start of the string, `\d+` requires one or more numeric digits between 0 and 9, and `$` asserts the end of the string. If the user types any letters, punctuation, spaces, or special characters, the regex returns `false` and displays an inline error message."*
-
-### Q4: Why did you choose Dark Magenta (`#8B008B`) for your website palette?
-**Answer:**  
-*"I chose Dark Magenta (`#8B008B`) to give the portfolio a distinctive, modern, and engaging identity while maintaining high visual contrast and academic professionalism. By establishing `--primary-color: #8B008B` in `css/style.css`, the color is systematically used across headings, button states, audio banners, table headers, and navigation indicators."*
-
-### Q5: How did you implement the multimedia requirement?
-**Answer:**  
-*"The rubric specifies Multimedia (video or audio). Following the lecturer's guidance to be creative and make the portfolio personal and engaging, I recorded and integrated an audio welcome message (`assets/intro.mp4`) directly on the homepage hero section using the HTML5 `<audio controls>` player."*
-
----
-
-## F. Conclusion & Rubric Compliance Matrix
+## E. Conclusion & Rubric Compliance Matrix
 
 | COS 106 Rubric Requirement | How It Is Implemented in This Project | Status |
 | :--- | :--- | :--- |
