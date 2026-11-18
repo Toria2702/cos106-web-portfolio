@@ -1,7 +1,8 @@
 # COS 106 Term Project – Student Portfolio & Academic Management Website
 
 **Name:** Victoria Okon  
-**Matric No:** MIVA/BSc/SE/2025/0428  
+**Matric No:** 2025/C/SENG/0801  
+**Student ID:** 301879012  
 **Programme:** Software Engineering  
 **Course:** COS 106 – Introduction to Web Technologies  
 **University:** MIVA Open University  
@@ -67,6 +68,7 @@ If validation passes, a green success banner appears and the data gets saved loc
 │   └── validation.js
 ├── assets/
 │   ├── profile.jpg
+│   ├── intro.mp4
 │   ├── intro.wav
 │   ├── project1-records.svg
 │   ├── project2-planner.svg

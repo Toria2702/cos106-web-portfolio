@@ -17,7 +17,7 @@
 
   <!-- App Header / Stats Card -->
   <rect x="25" y="55" width="550" height="60" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
-  <text x="45" y="80" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">STUDENT: VICTORIA OKON (SE)</text>
+  <text x="45" y="80" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="12">STUDENT: VICTORIA OKON &bull; MATRIC: 2025/C/SENG/0801</text>
   <text x="45" y="102" fill="#38bdf8" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold">Current Cumulative GPA: 4.85 / 5.00</text>
   <rect x="440" y="68" width="115" height="34" rx="4" fill="#2563eb"/>
   <text x="455" y="90" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold">+ Add Course</text>

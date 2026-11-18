@@ -1,6 +1,6 @@
 // ===============================================================
 // COS 106: Introduction to Web Technologies - Contact Form Validation
-// Student: Victoria Okon | Matric: MIVA/BSc/SE/2025/0428
+// Student: Victoria Okon | Matric: 2025/C/SENG/0801 | Student ID: 301879012
 // Requirements:
 // 1. Ensure no field is empty
 // 2. Ensure email format is valid (contains @ and a valid domain)

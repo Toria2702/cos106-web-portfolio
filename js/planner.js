@@ -1,6 +1,6 @@
 // ===============================================================
 // COS 106: Introduction to Web Technologies - Academic Planner Script
-// Student: Victoria Okon | Matric: MIVA/BSc/SE/2025/0428
+// Student: Victoria Okon | Matric: 2025/C/SENG/0801 | Student ID: 301879012
 // Handles: Task adding, marking completed, deleting, and filtering
 // ===============================================================
 
